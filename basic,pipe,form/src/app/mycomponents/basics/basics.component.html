@@ -1,0 +1,53 @@
+<div class="container-fluid">
+
+
+<!-- [] property binding -->
+<h6>[] property binding</h6>
+<input type="text" [value]="myColor"/>
+
+<br/><br/>
+
+<!-- {{}} interpolation -->
+<h6>interpolation</h6>
+<input type="text" value="{{myColor}}"/>
+
+<br/><br/>
+<!-- [] property binding and {{}} interpolation -->
+<h1 [style.background]="myColor">My favorite color is {{myColor}}</h1>
+
+<!-- =================================== -->
+
+<!-- if -->
+<h2 *ngIf="myColor=='green'">Green</h2>
+<!--// if -->
+
+<!-- if, else -->
+<h3 *ngIf="myColor=='blue'; else elseBlock">Blue</h3>
+<ng-template #elseBlock>
+  <p>Orange</p>
+</ng-template>
+<!--// if, else -->
+
+<!-- =================================== -->
+
+<ul *ngFor="let item of myList">
+  <li>{{item.name}}</li>
+  <li>{{item.address}}</li>
+  <li>{{item.age}}</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

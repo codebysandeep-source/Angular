@@ -1,0 +1,12 @@
+<input type="hidden" #selection>
+
+
+<button (click) = "selection.value = 'san'">
+  Click
+</button> 
+<button (click) = "selection.value = 'deep'">Click2</button>
+
+<div [ngSwitch] = "selection.value" >
+  <p *ngSwitchDefault="'san'">san</p>
+  <p *ngSwitchCase="'deep'">deep</p>
+</div>

@@ -1,0 +1,14 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mb-3">
+      <div class="index-nav bg-dark p-4">
+        <a *ngFor="let mylink of pageLink" [routerLink]="mylink" routerLinkActive="active">
+          {{mylink | titlecase}}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

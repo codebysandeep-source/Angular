@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <pre>
+<!-- Pipes -->
+<h2>Pipes</h2>
+<p>Pipes are basically used for transfer the data from one format to another format. <br/>
+For example - <br/>
+you have a string and you want to just make it in uppercase or in the lowercase that time you can use pipes,
+or you want to update a date format or you want to apply the percentage on any number or you want to apply the local  in that all cases we can use the pipes
+</p>
+
+<h4>Using pipes: </h4>
+<ul>
+  <h6>String</h6>
+  <li>normal -> {{myText}}</li>
+  <li>titlecase -> {{myText | titlecase}}</li>
+  <li>uppercase -> {{myText | uppercase}}</li>
+  <li>lowercase -> {{myText | lowercase}}</li>
+</ul>
+
+<!-- date -->
+<ul>
+  <h6>Date</h6>
+  <li>normal -> {{todayDate}}</li>
+  <li>date -> {{todayDate | date}}</li>
+  <li>date:'fulldate' -> {{todayDate | date:'fullDate'}}</li>
+</ul>
+
+<!-- slice -->
+<ul>
+  <h6>Slice</h6><span>syntax-> slice: from:to <br/>example-> slice: 0:5</span>
+  <li>normal text -> Hello Developers!</li>
+  <li>slice: 0:5 -> {{myText1 | slice: 0:5 }}</li>
+  <li>slice: 0:9 -> {{myText1 | slice: 0:9 }}</li>
+  <li>slice: 2:10 -> {{myText1 | slice: 2:10 }}</li>
+</ul>
+
+<!-- json (JavaScript Object Notation) -->
+<ul>
+  <h6>JSON</h6>
+  <li>normal -> {{myList}}</li>
+  <li>json -> {{myList | json}}</li>
+</ul>
+
+<!-- number -->
+<ul>
+  <h6>number</h6><span>syntax-> number: 'leftNumberDigit . 1-noOfDigitAfterDot' <br/>example-> number: '1.1-3'</span>
+  <li>normal -> 007.43500</li>
+  <li>number:'1.1-3' -> {{007.43500 | number: '1.1-3'}}</li>
+  <li>number:'2.1-1' -> {{007.43500 | number: '2.1-1'}}</li>
+  <li>number:'5.1-2' -> {{007.43500 | number: '5.1-2'}}</li>
+</ul>
+
+<!-- currency -->
+<ul>
+  <h6>currency</h6>
+  <li>normal -> 100</li>
+  <li>currency: 'USD' -> {{100 | currency:'USD'}}</li>
+  <li>currency: 'INR' -> {{100 | currency:'INR'}}</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </pre>
+
+
+
+</div>

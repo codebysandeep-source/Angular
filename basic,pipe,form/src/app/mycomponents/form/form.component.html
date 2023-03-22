@@ -1,0 +1,84 @@
+<div class="container-fluid">
+  <!-- Row1 -->
+  <div class="row">
+    <div class="col-2">
+      <h3 class="text-warning">Form</h3>
+    </div>
+    <div class="col-12">
+      <p>Submitting any kind of data (raw of information) to database.
+         But, you know that in Angular we can not connect to database,<br/>
+         however, we can submit our data by using API for inserting, updating, etc. in to the database which we are created by using Nodejs, Django, PHP, etc.
+      </p>
+
+      <br/>
+
+      <h6>Example - </h6>
+      <p>Login / Signup Form</p>
+      <p>Inside form, we can provides the input fields like text, email, password, etc. For example - <code><input type="text" placeholder="text"/></code></p>
+      <br/>
+      <h6 class="text-info">There are 2 types of Form in Angular</h6>
+      <ol>
+        <li>Template-driven form <ul><li>Component Template. <br/>pageExample- app.component.html </li></ul> </li>
+        <li>Reactive form <ul><li>Component Class. <br/>pageExample- app.component.ts </li></ul> </li>
+      </ol>
+
+      <br/>
+
+      <h6 class="text-primary">Data Flow with Form</h6>
+      <div class="col-12 row m-1 pt-3 px-2 border">
+        <p class="col-2 p-2 border bg-dark text-info">Template</p>
+        <span class="col-1 p-2 text-center">-></span>
+        <p class="col-2 p-2 border bg-dark text-success">Class</p>
+        <span class="col-1 p-2 text-center">-></span>
+        <p class="col-2 p-2 border bg-dark text-warning">Service</p>
+        <span class="col-1 p-2 text-center">-></span>
+        <p class="col-2 p-2 border bg-dark text-primary">Database</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- //Row1 -->
+
+  <!-- Row2 -->
+  <div class="row mt-5">
+    <h6 class="text-success">Template-driven Form</h6>
+    <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)" class="form border p-3 w-50 m-2 row">
+      <div class="col-6">
+        <label>Email</label>
+        <input type="email" #Email="ngModel" required="" name="email" ngModel email placeholder="Enter your email" class="form-control"/>
+        <span *ngIf="Email.invalid && Email.touched" class="text-danger">Please enter the valid email * </span>
+      </div>
+      <div class="col-6">
+        <label>Password</label>
+        <input type="password" #Password="ngModel" required="" name="password" ngModel placeholder="Enter your password" class="form-control"/>
+        <span *ngIf="Password.invalid && Password.touched" class="text-danger">Please enter the valid password * </span>
+      </div>
+      <div class="col-12">
+        <button [disabled]="loginForm.invalid" class="btn btn-sm btn-info mt-2">Submit</button>
+      </div>
+    </form>
+    <!-- submit by clicking other button -->
+    <button [disabled]="loginForm.invalid" (click)="loginUser(loginForm.value)" class="m-2 w-50 btn btn-sm btn-success">Outer Button Submit</button>
+
+  </div>
+  <!-- //Row2 -->
+
+
+  <!-- Row3 -->
+  <div class="row col-12 w-50">
+    <ol class="m-3">
+      <li *ngFor="let item of userList">
+      <ul class="m-2">
+        <li>Name : {{item.email}}</li>
+        <li>Password : {{item.password}}</li>
+      </ul>
+      </li>
+    </ol>
+  </div>
+  <!-- //Row3 -->
+
+
+
+</div>
+
+<div style="margin: 24rem;"></div>
